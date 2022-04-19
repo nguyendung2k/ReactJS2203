@@ -1,4 +1,4 @@
-function getUsers(callback) {
+function getUsers() {
     return new Promise((resolve, reject) => { // new khoi tao doi tuong
         let check = true;
 
@@ -23,11 +23,14 @@ function getUsers(callback) {
 }
 
 
+// function getUserById() {
+//     return new Promise(function(resolve, reject) {
+//         resolve()
+//     })
+// }
 
 
 
 getUsers()
-    .then(user => new Promise((resolve, reject) => {
-        resolve(user.find(user => user.id === id))
-    }))
+    .then(user => console.log(user))
     .catch(err => console.log(err))
